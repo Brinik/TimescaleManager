@@ -14,14 +14,6 @@ namespace TimescaleManager.Controllers
             _fileService = fileService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll() 
-        {
-
-            return Ok(await _fileService.GetFilesAsync());
-
-        }
-
         /// <summary>
         /// Добавление файла csv в БД.
         /// </summary>

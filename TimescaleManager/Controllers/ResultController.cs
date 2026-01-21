@@ -31,11 +31,5 @@ namespace TimescaleManager.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpGet("All")]
-        public async Task<IActionResult> GetAllResults() 
-        {
-            return Ok(await _resultService.GetAllResultsAsync());
-        }
-
     }
 }

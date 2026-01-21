@@ -13,13 +13,6 @@ namespace TimescaleManager.Controllers
             _valueService = valueService;
         }
 
-        [HttpGet("All")]
-        public async Task<IActionResult> GetAll() 
-        {
-
-            return Ok(await _valueService.GetValuesAsync());
-        }
-
         /// <summary>
         /// Получение списка последних 10 значений, отсортированных по начальному времени запуска Date по имени заданного файла.
         /// </summary>
