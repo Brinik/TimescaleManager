@@ -151,7 +151,7 @@ namespace TimescaleManager.Services
             using (var reader = new StreamReader(file.OpenReadStream()))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                csv.Context.TypeConverterCache.AddConverter<double>(new CustomDoubleConverter());
+                csv.Context.TypeConverterCache.AddConverter<float>(new CustomFloatConverter());
                 try
                 {
                     var records = csv.GetRecordsAsync<TimescaleValueCsvRecord>();

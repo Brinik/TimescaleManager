@@ -5,7 +5,7 @@ using System.Globalization;
 namespace TimescaleManager.Customs
 {
     //Кастомный конвертер чисел с плавающей запятой
-    public class CustomDoubleConverter : CsvHelper.TypeConversion.SingleConverter
+    public class CustomFloatConverter : CsvHelper.TypeConversion.SingleConverter
     {
         public override object ConvertFromString(string? text, IReaderRow row, MemberMapData memberMapData)
         {
@@ -15,7 +15,7 @@ namespace TimescaleManager.Customs
             text = text.Replace(',', '.');
             text = text.Replace(" ", "");
 
-            if (double.TryParse(text, NumberStyles.Any, CultureInfo.InvariantCulture, out double result))
+            if (float.TryParse(text, NumberStyles.Any, CultureInfo.InvariantCulture, out float result))
             {
                 return result;
             }

@@ -4,10 +4,10 @@
     {
         public double DateDelta { get; set; }
         public DateTime MinDate { get; set; }
-        public double AvgExecutionTime { get; set; }
-        public double AvgValue { get; set; }
-        public double MedianValue { get; set; }
-        public double MaxValue { get; set; }
-        public double MinValue { get; set; }
+        public float AvgExecutionTime { get; set; }
+        public float AvgValue { get; set; }
+        public float MedianValue { get; set; }
+        public float MaxValue { get; set; }
+        public float MinValue { get; set; }
     }
 }

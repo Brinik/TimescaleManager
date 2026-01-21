@@ -17,12 +17,12 @@ namespace Domain.Entities
         /// <summary>
         /// Время выполнения в секундах.
         /// </summary>
-        public double ExecutionTime { get; set; }
+        public float ExecutionTime { get; set; }
 
         /// <summary>
         /// Показатель в виде числа с плавающей запятой.
         /// </summary>
-        public double Value { get; set; }
+        public float Value { get; set; }
 
         public Guid FileId { get; set; }
 

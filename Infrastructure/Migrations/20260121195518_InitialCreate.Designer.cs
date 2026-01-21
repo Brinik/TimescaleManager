@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20260121174832_InitialCreate")]
+    [Migration("20260121195518_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -49,11 +49,11 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<double>("AvgExecutionTime")
-                        .HasColumnType("double precision");
+                    b.Property<float>("AvgExecutionTime")
+                        .HasColumnType("real");
 
-                    b.Property<double>("AvgValue")
-                        .HasColumnType("double precision");
+                    b.Property<float>("AvgValue")
+                        .HasColumnType("real");
 
                     b.Property<double>("DateDelta")
                         .HasColumnType("double precision");
@@ -61,17 +61,17 @@ namespace Infrastructure.Migrations
                     b.Property<Guid>("FileId")
                         .HasColumnType("uuid");
 
-                    b.Property<double>("MaxValue")
-                        .HasColumnType("double precision");
+                    b.Property<float>("MaxValue")
+                        .HasColumnType("real");
 
-                    b.Property<double>("MedianValue")
-                        .HasColumnType("double precision");
+                    b.Property<float>("MedianValue")
+                        .HasColumnType("real");
 
                     b.Property<DateTime>("MinDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<double>("MinValue")
-                        .HasColumnType("double precision");
+                    b.Property<float>("MinValue")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
 
@@ -91,14 +91,14 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<double>("ExecutionTime")
-                        .HasColumnType("double precision");
+                    b.Property<float>("ExecutionTime")
+                        .HasColumnType("real");
 
                     b.Property<Guid>("FileId")
                         .HasColumnType("uuid");
 
-                    b.Property<double>("Value")
-                        .HasColumnType("double precision");
+                    b.Property<float>("Value")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
 

@@ -7,9 +7,9 @@ namespace Domain.Specifications
         public string? Name { get; set; }
         public DateTime MinDate { get; set; }
         public DateTime MaxDate { get; set; }
-        public double MinAvgValue { get; set; }
-        public double MaxAvgValue { get; set; }
-        public double MinAvgExecutionTime { get; set; }
-        public double MaxAvgExecutionTime { get; set; }
+        public float MinAvgValue { get; set; }
+        public float MaxAvgValue { get; set; }
+        public float MinAvgExecutionTime { get; set; }
+        public float MaxAvgExecutionTime { get; set; }
     }
 }

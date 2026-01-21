@@ -19,27 +19,27 @@ namespace Domain.Entities
         /// <summary>
         /// среднее время выполнения (ExecutionTime)
         /// </summary>
-        public double AvgExecutionTime { get; set; }
+        public float AvgExecutionTime { get; set; }
 
         /// <summary>
         /// среднее значение по показателям (Value)
         /// </summary>
-        public double AvgValue { get; set; }
+        public float AvgValue { get; set; }
 
         /// <summary>
         /// медиана по показателям (Value)
         /// </summary>
-        public double MedianValue { get; set; }
+        public float MedianValue { get; set; }
 
         /// <summary>
         ///  максимальное значение показателя (Value)
         /// </summary>
-        public double MaxValue { get; set; }
+        public float MaxValue { get; set; }
 
         /// <summary>
         /// минимальное значение показателя (Value)
         /// </summary>
-        public double MinValue { get; set; }
+        public float MinValue { get; set; }
 
         public Guid FileId { get; set; }
 

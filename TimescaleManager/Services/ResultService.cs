@@ -32,13 +32,13 @@ namespace TimescaleManager.Services
 
             DateTime minDate = firstValue.Date;
             DateTime maxDate = firstValue.Date;
-            double sumExecutionTime = firstValue.ExecutionTime;
-            double sumValue = firstValue.Value;
-            double maxValue = firstValue.Value;
-            double minValue = firstValue.Value;
+            float sumExecutionTime = firstValue.ExecutionTime;
+            float sumValue = firstValue.Value;
+            float maxValue = firstValue.Value;
+            float minValue = firstValue.Value;
 
             // Для медианы собираем все значения Value
-            var valueList = new List<double>(values.Count);
+            var valueList = new List<float>(values.Count);
             valueList.Add(firstValue.Value);
 
             // Проходим по остальным элементам (начиная со второго)
@@ -66,7 +66,7 @@ namespace TimescaleManager.Services
                 valueList.Add(current.Value);
             }
 
-            double medianValue;
+            float medianValue;
             valueList.Sort();
             int count = valueList.Count;
 
@@ -82,10 +82,10 @@ namespace TimescaleManager.Services
             }
             return new TimescaleResult
             {
-                DateDelta = (double)(maxDate - minDate).TotalSeconds,
+                DateDelta = (float)(maxDate - minDate).TotalSeconds,
                 MinDate = minDate,
-                AvgExecutionTime = (double)(sumExecutionTime / values.Count),
-                AvgValue = (double)(sumValue / values.Count),
+                AvgExecutionTime = (float)(sumExecutionTime / values.Count),
+                AvgValue = (float)(sumValue / values.Count),
                 MedianValue = medianValue,
                 MaxValue = maxValue,
                 MinValue = minValue

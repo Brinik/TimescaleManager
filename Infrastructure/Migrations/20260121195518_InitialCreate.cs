@@ -32,11 +32,11 @@ namespace Infrastructure.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     DateDelta = table.Column<double>(type: "double precision", nullable: false),
                     MinDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    AvgExecutionTime = table.Column<double>(type: "double precision", nullable: false),
-                    AvgValue = table.Column<double>(type: "double precision", nullable: false),
-                    MedianValue = table.Column<double>(type: "double precision", nullable: false),
-                    MaxValue = table.Column<double>(type: "double precision", nullable: false),
-                    MinValue = table.Column<double>(type: "double precision", nullable: false),
+                    AvgExecutionTime = table.Column<float>(type: "real", nullable: false),
+                    AvgValue = table.Column<float>(type: "real", nullable: false),
+                    MedianValue = table.Column<float>(type: "real", nullable: false),
+                    MaxValue = table.Column<float>(type: "real", nullable: false),
+                    MinValue = table.Column<float>(type: "real", nullable: false),
                     FileId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
@@ -57,8 +57,8 @@ namespace Infrastructure.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ExecutionTime = table.Column<double>(type: "double precision", nullable: false),
-                    Value = table.Column<double>(type: "double precision", nullable: false),
+                    ExecutionTime = table.Column<float>(type: "real", nullable: false),
+                    Value = table.Column<float>(type: "real", nullable: false),
                     FileId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
